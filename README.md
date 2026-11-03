@@ -4,7 +4,9 @@
 
 ## Contexte
 
-✏️ *En cinq à huit phrases : qui utilise l'outil (son métier, son geste professionnel), son besoin, ce qu'il saisit, ce que le programme lui affiche, ce que l'outil ne fait pas.*
+### Contexte
+
+Le carnet est destiné à l'assistant terrain Agritech de la ferme pédagogique qui est chargé d'observer les caractéristiques du sol sur différentes parcelles. À l'aide d'une fiche de terrain, il relève la texture, le pH et l'état d'humidité de chaque point observé. Il a besoin d'un outil simple pour enregistrer ses observations, les retrouver facilement et repérer les valeurs à vérifier avec le coach. Pour chaque point, il renseigne un identifiant, une parcelle, une texture, un pH compris entre 0 et 14 et un état d'humidité. Le programme permet de consulter, rechercher et trier les observations, ainsi que d'obtenir une synthèse des données collectées. Il signale notamment les points dont le pH est inférieur à 5,5 pour qu'ils soient discutés avec le coach. Le carnet enregistre uniquement des constats : il ne réalise aucun diagnostic de fertilisation, ne donne aucun conseil automatique et ne calcule pas de moyenne de pH.
 
 ## Prérequis et lancement
 
