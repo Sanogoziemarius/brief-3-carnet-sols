@@ -38,7 +38,30 @@ export function trouverParId(observations, id) {
 // · texture présente dans TEXTURES · pH nombre entre 0 et 14 (bornes comprises)
 // · etatHumidite présent dans HUMIDITES. N'ajoutez aucune autre règle que celles-ci.
 export function verifierObservation(saisie, observations) {
-  throw new Error('TODO : coder verifierObservation dans src/registre.js');
+  const erreur = [];
+  if (!saisie.id) {
+    erreur.push("L'identifiant est obligatoire.");
+  } else {
+    for (const observation of observations) {
+      if (observation.id === saisie.id) {
+        erreur.push("Cet identifiant existe déjà dans le carnet.");
+      }
+    }
+  }
+  if (!saisie.parcelle) {
+    erreur.push("La parcelle est obligatoire.");
+  }
+  const pH = versNombre(saisie.pH);
+  if (Number.isNaN(pH) || pH < 0 || pH > 14) {
+    erreur.push("Le pH doit être un nombre de 0 à 14.");
+  }
+  if (!HUMIDITES.includes(saisie.etatHumidite)) {
+    erreur.push("L'état d'humidité doit être sec, intermédiaire ou humide.");
+  }
+  if (!TEXTURES.includes(saisie.texture)) {
+    erreur.push("La texture doit être sableux, limoneux ou argileux.");
+  }
+  return erreur;
 }
 
 // Fabrique l'observation à enregistrer à partir d'une saisie VALIDE : pH devient un nombre.
