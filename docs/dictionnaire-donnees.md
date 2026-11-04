@@ -4,7 +4,7 @@
 
 | Champ | Signification | Type | Règle de validation | Unité | Exemple |
 | --- | --- | --- | --- | --- | --- |
-| `id` | Identifiant unique | texte | non vide, il est obligatoire et unique dans le carnet | — | SO2 |
+| `id` | Identifiant unique | texte | non vide, il est obligatoire et unique dans le carnet | — | S02 |
 |`parcelle`|surface délimité permettant d'identifier la parcelle sur laquelle le point est observé | texte| il doit être obligatoire et non vide |-| P1|
 |  `texture`| Indique la classe de texturale du sol observé| texte|Accepter uniquement: sableux, limoneux ou argileux | -| argileux|
 | `pH`| il représente le niveau d'acidité ou d'alcalinité du sol au point d'observé| nombre|non vide, doit être un nombre et accepter uniquement les nombres compris entre 0 et 14 inclus. | sans unité|4.5 |
