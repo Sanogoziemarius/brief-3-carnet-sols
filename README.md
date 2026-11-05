@@ -25,27 +25,35 @@ Sous PowerShell, si `npm` est bloqué : `npm.cmd test`.
 
 ✏️ *Cochez seulement ce qui marche : `- [x]`.*
 
-- [ ] Données lues et enregistrées dans `donnees/observations.json`
-- [ ] Ajouter une observation, saisies invalides refusées sans arrêter le programme
-- [ ] Lister les observations, message si le carnet est vide
-- [ ] Rechercher par point ou par parcelle ; filtrer par texture
-- [ ] Trier par pH
-- [ ] Synthèse : pH minimum et maximum, nombre par texture, points à discuter (pH < 5,5)
+- [`x`] Données lues et enregistrées dans `donnees/observations.json`
+- [`x`] Ajouter une observation, saisies invalides refusées sans arrêter le programme
+- [`x`] Lister les observations, message si le carnet est vide
+- [`x`] Rechercher par point ou par parcelle ; filtrer par texture
+- [`x`] Trier par pH
+- [`x`] Synthèse : pH minimum et maximum, nombre par texture, points à discuter (pH < 5,5)
 - [ ] Bonus : supprimer et modifier une observation (choix 6 et 7)
 - [ ] Bonus : tri par pH décroissant, texture la plus fréquente
 
 ## Données
 
-✏️ *Le fichier, le nombre d'observations, les champs (voir [docs/dictionnaire-donnees.md](docs/dictionnaire-donnees.md)), le pH sans unité. Rappelez qu'elles sont fictives.*
+Le carnet lit et écrit le fichier `donnees/observations.json`, qui contient 10 observations. Chaque observation a cinq champs : `id`, `parcelle`, `texture`, `pH` et `etatHumidite` (voir [docs/dictionnaire-donnees.md](docs/dictionnaire-donnees.md))
 
 ## Limites
 
-✏️ *Au moins trois. Par exemple : le carnet repère des valeurs à discuter, mais ne produit aucun diagnostic de fertilisation.*
-
+- le carnet repère des valeurs à discuter, mais ne produit aucun diagnostic de fertilisation.
+- il n'y a pas de date ni l'heure du relevé.
+- On ne peut pas voir l'evolution des différents relevés dans le temps
+- la classe texturale et les états d'humidités sont en nombre limités
 ## Documents
 
 [Dictionnaire des données](docs/dictionnaire-donnees.md) · [Tâches](docs/taches.md) · [Relevé des tests](docs/releve-tests.md) · [Journal de recherche](docs/journal-recherche.md) · [Fiche agronomique](docs/fiche-agronomique.md) · [Fiche individuelle](docs/fiche-individuelle.md)
 
 ## Auteur
+Prénom NOM: Zié Marius SANOGO,
+ compte GitHub : [Sanogoziemarius], (https://github.com/Sanogoziemarius).
 
-✏️ *Prénom NOM, compte GitHub. Entraide : avec qui, sur quoi.*
+ Entraide : 
+ - le camarade Anglovia m'a aidé a  comprendre les fonctions asynchrones.
+ - le camarade Jean-Marie m'a expliqué la boucle (for of) 
+ - J'ai aidé jean-Mariee a comprendre la méthode JSON.parse et JSON.stringify 
+
