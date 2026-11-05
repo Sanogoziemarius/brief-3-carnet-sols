@@ -23,8 +23,18 @@ async function main() {
     console.log(`${observations.length} observation(s) chargée(s) depuis ${FICHIER_DONNEES}.`);
   } catch (erreur) {
     console.log(`Impossible de lire ${FICHIER_DONNEES} : ${erreur.message}. Le carnet démarre vide.`);
-  }
-  fermerSaisie();
+  };
+  function afficherMenu (){
+    console.log("");
+    console.log("--------------------- MENU ---------------------");
+    console.log("1. Ajouter une observation");
+    console.log("2. Lister les observations");
+    console.log("3. Rechercher (point, parcelle, texture)");
+    console.log("4. Trier par pH");
+    console.log("5. Synthèse des observations");
+    console.log("0. Quitter");
 }
-
+afficherMenu();
+fermerSaisie();
+}
 main();
