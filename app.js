@@ -12,7 +12,7 @@ const FICHIER_DONNEES = 'donnees/observations.json';
 
 async function main() {
   ouvrirSaisie();
-   console.log("==================================================");
+  console.log("==================================================");
   console.log("   CARNET D'OBSERVATION DES SOLS");
   console.log("   Ferme pédagogique");
   console.log("==================================================");
@@ -23,7 +23,7 @@ async function main() {
     console.log(`${observations.length} observation(s) chargée(s) depuis ${FICHIER_DONNEES}.`);
   } catch (erreur) {
     console.log(`Impossible de lire ${FICHIER_DONNEES} : ${erreur.message}. Le carnet démarre vide.`);
-  };
+  }
   function afficherMenu (){
     console.log("");
     console.log("--------------------- MENU ---------------------");
@@ -34,7 +34,17 @@ async function main() {
     console.log("5. Synthèse des observations");
     console.log("0. Quitter");
 }
-afficherMenu();
+let continuer = true;
+  while (continuer) {
+    afficherMenu();
+    const choix = await demander('Votre choix : ');
+    if (choix === null || choix === '0') {
+      console.log('Au revoir !');
+      continuer = false;
+    } else {
+      console.log(`Choix inconnu : « ${choix} ». Tapez un chiffre du menu.`);
+    }
 fermerSaisie();
+}
 }
 main();
