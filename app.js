@@ -12,7 +12,18 @@ const FICHIER_DONNEES = 'donnees/observations.json';
 
 async function main() {
   ouvrirSaisie();
-  console.log("À compléter : écrivez le menu dans app.js (fiches/3-ajouter-lister.md).");
+   console.log("==================================================");
+  console.log("   CARNET D'OBSERVATION DES SOLS");
+  console.log("   Ferme pédagogique");
+  console.log("==================================================");
+
+  let observations = [];
+  try {
+    observations = await chargerJson(FICHIER_DONNEES);
+    console.log(`${observations.length} observation(s) chargée(s) depuis ${FICHIER_DONNEES}.`);
+  } catch (erreur) {
+    console.log(`Impossible de lire ${FICHIER_DONNEES} : ${erreur.message}. Le carnet démarre vide.`);
+  }
   fermerSaisie();
 }
 
