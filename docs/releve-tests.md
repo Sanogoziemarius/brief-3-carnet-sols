@@ -18,4 +18,7 @@
 |4, 1 |pHmin:S04(4,8) et pHmax: S08(7,6)| premier :pH 4.8  et dernier: pH 7.6| zie marius sanogo|
 | choix 9 | choix inconnu : 9. saisir un chiffre du menu et le menu apparait|Choix inconnu : « 9 ». Tapez un chiffre du menu. | zie marius sanogo|
 
-**Sur un autre poste** (`git clone`, `node app.js`, `npm test`, en suivant le README) : ✏️
+**Sur un autre poste** (`git clone`, `node app.js`, `npm test`, en suivant le README) : 
+node app.js: le programme fonctionne correctement avec les tests.
+npm test: 29 tests valide hors bonus 
+nom du testeur: jean-marie DADIE
