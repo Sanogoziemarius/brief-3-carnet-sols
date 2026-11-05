@@ -3,7 +3,13 @@
 
 // Renvoie un NOUVEAU tableau avec les observations de cette parcelle (éventuellement vide).
 export function filtrerParParcelle(observations, parcelle) {
-  throw new Error('TODO : coder filtrerParParcelle dans src/recherche.js');
+const resultat = [];
+  for (const observation of observations) {
+    if (observation.parcelle === parcelle) {
+      resultat.push(observation);
+    }
+  }
+  return resultat;
 }
 
 // Renvoie un NOUVEAU tableau avec les observations de cette texture (éventuellement vide).
