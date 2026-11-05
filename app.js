@@ -153,10 +153,7 @@ async function main() {
       console.log('Au revoir !');
       continuer = false;
     }else{
-      console.log(`Choix inconnu : « ${choix} ». Tapez un chiffre du menu.`);
-    }
-  
-    try {
+     try {
       if (choix === '1') {
         await ajouter();
       } else if (choix === '2') {
@@ -175,6 +172,7 @@ async function main() {
         console.log(`À compléter : ${erreur.message}`);
       }else{
         console.log(`Erreur inattendue : ${erreur.message}`);
+      }
     }
   }
 }
